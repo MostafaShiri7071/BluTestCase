@@ -1,4 +1,4 @@
-package com.blu.testcase.base
+package com.blu.testcase.appUtilities.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
-import androidx.annotation.StringRes
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.blu.testcase.R
-import com.google.android.material.snackbar.Snackbar
-import org.koin.androidx.viewmodel.ext.android.getSharedViewModel
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import java.lang.reflect.ParameterizedType
 import kotlin.reflect.KClass

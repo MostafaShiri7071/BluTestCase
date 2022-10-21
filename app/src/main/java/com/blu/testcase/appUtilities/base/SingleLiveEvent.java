@@ -1,4 +1,4 @@
-package com.blu.testcase.base;
+package com.blu.testcase.appUtilities.base;
 
 
 import android.util.Log;

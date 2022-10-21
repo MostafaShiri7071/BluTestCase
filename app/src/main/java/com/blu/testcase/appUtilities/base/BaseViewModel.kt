@@ -1,4 +1,4 @@
-package com.blu.testcase.base
+package com.blu.testcase.appUtilities.base
 
 import androidx.lifecycle.ViewModel
 
@@ -13,7 +13,4 @@ abstract class BaseViewModel : ViewModel() {
         this.showProgress.postValue(showProgress)
     }
 
-    protected fun handleFailure(failure: Boolean) {
-        responseError.postValue(failure)
-    }
 }
