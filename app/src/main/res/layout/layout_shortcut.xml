@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgChart"
+        android:layout_width="60dp"
+        app:tint="@color/colorHeaderIconTint"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toStartOf="@id/imgBox"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_chart"
+        android:background="@drawable/bg_transparent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBox"
+        android:layout_width="60dp"
+        app:tint="@color/colorHeaderIconTint"
+        android:layout_marginStart="24dp"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_transparent"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_spaces"
+        app:layout_constraintBaseline_toBaselineOf="@id/imgChart"
+        app:layout_constraintEnd_toStartOf="@id/imgAdd"
+        app:layout_constraintStart_toEndOf="@id/imgChart"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgAdd"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/imgBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_white"
+        android:src="@drawable/add"
+        app:layout_constraintStart_toEndOf="@id/imgBox"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgAdd"
+        app:layout_constraintStart_toStartOf="@id/imgAdd"
+        app:layout_constraintEnd_toEndOf="@id/imgAdd"
+        android:textColor="@color/colorHeaderText"
+        android:text="@string/increase_credit"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgBox"
+        app:layout_constraintStart_toStartOf="@id/imgBox"
+        app:layout_constraintEnd_toEndOf="@id/imgBox"
+        android:textColor="@color/colorHeaderText"
+        android:text="@string/box"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgChart"
+        app:layout_constraintStart_toStartOf="@id/imgChart"
+        app:layout_constraintEnd_toEndOf="@id/imgChart"
+        android:textColor="@color/colorHeaderText"
+        android:text="@string/manage_financial"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

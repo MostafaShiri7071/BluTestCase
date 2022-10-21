@@ -1,6 +1,7 @@
 package com.blu.testcase.feature.home
 
 import com.blu.testcase.appUtilities.base.BaseFragment
+import com.blu.testcase.appUtilities.extention.asCurrency
 import com.blu.testcase.databinding.FragmentHomeBinding
 
 
@@ -16,6 +17,7 @@ class HomeFragment: BaseFragment<HomeViewModel, FragmentHomeBinding>(
     }
 
     override fun configureUI() {
+        binding?.header?.tvBalance?.text=("12345678").asCurrency()
         configureTransactionList()
         viewModel.fetchAllTransactions()
     }

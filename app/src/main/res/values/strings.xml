@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">TestCase</string>
-
+    <string name="home">خانه</string>
+    <string name="balance">موجودی</string>
+    <string name="manage_financial">مدیریت مالی</string>
+    <string name="box">باکس</string>
+    <string name="increase_credit">شارژ حساب</string>
 </resources>
