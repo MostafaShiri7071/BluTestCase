@@ -1,10 +1,11 @@
+/**
+ * $Header$
+ */
 package com.blu.testcase.appUtilities.component;
-
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-
 
 public class PersianDateFormat extends SimpleDateFormat {
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+    android:layoutDirection="rtl"
     android:padding="16dp">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -14,9 +14,9 @@
         app:tint="@color/colorHeaderIconTint"
         android:layout_height="60dp"
         android:padding="16dp"
-        app:layout_constraintEnd_toStartOf="@id/imgBox"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgBox"
+        app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_chart"
         android:background="@drawable/bg_transparent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -42,10 +42,10 @@
         android:layout_height="60dp"
         android:padding="16dp"
         app:layout_constraintBaseline_toBaselineOf="@id/imgBox"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/bg_white"
         android:src="@drawable/add"
-        app:layout_constraintStart_toEndOf="@id/imgBox"/>
+        app:layout_constraintEnd_toStartOf="@id/imgBox"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"

@@ -1,6 +1,6 @@
 package com.blu.testcase.appUtilities.extention
 
-import com.blu.testcase.appUtilities.component.DateUtils.*
+import com.blu.testcase.appUtilities.component.DateUtils
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -21,9 +21,9 @@ fun Date.getJalaliFormattedDate(format: String?, embedLTR: Boolean): String? {
     val cal = Calendar.getInstance()
     cal.time = this
     val jalaliDate: String = if (embedLTR)
-        getLocaleDate(FARSI_LOCALE, this, format, true)
+        DateUtils.getLocaleDate(DateUtils.FARSI_LOCALE, this, format, true)
     else
-        getLocaleDate(ENGLISH_LOCALE, this, format, true)
+        DateUtils.getLocaleDate(DateUtils.ENGLISH_LOCALE, this, format, true)
     return if (embedLTR) {
         embedLTR(jalaliDate)
     } else {
@@ -37,7 +37,10 @@ fun embedLTR(text: String): String {
     } else '\u202A'.toString() + text + '\u202A'
 }
 
-inline fun date(timeInMillis: Long = System.currentTimeMillis(), block: SimpleDate.() -> Unit = {}): SimpleDate {
+inline fun date(
+    timeInMillis: Long = System.currentTimeMillis(),
+    block: SimpleDate.() -> Unit = {}
+): SimpleDate {
     val dateDsl = SimpleDate()
     dateDsl.timeInMillis = timeInMillis
     block(dateDsl)

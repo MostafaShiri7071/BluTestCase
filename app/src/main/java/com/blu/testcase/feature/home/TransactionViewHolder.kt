@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.blu.testcase.R
+import com.blu.testcase.appUtilities.component.PersianCalendar
 import com.blu.testcase.appUtilities.extention.asCurrency
 import com.blu.testcase.appUtilities.extention.getJalaliFormattedDate
 import com.blu.testcase.data.TransactionDto
@@ -22,6 +23,7 @@ class TransactionViewHolder(
             withTime = true,
             embedLTR = true
         )
+
         binding.imgTransactionType.setImageResource(transaction.icon)
         binding.tvTransactionAmount.setBackgroundColor(
             if (transaction.transactionType==TransactionType.WITHDRAW)
